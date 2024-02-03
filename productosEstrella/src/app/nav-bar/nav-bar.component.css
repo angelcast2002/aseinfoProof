@@ -1,0 +1,35 @@
+.mainContainer {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(66, 107, 149, 0.75);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileImg {
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  font-weight: normal;
+}

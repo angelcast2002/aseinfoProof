@@ -1,15 +1,15 @@
 <main class="main">
   <div class="navBar">
-    navbar
+    <app-nav-bar />
   </div>
   <div class="page">
     <div class="filtros">
-      filtros
+      <app-filtros />
     </div>
     <div class="productos">
-      <app-info-card />
-      <app-info-card />
-      <app-info-card />
+      @for (i of array; track i) {
+        <app-info-card />
+      }
     </div>
   </div>
 </main>

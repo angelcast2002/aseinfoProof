@@ -1,0 +1,19 @@
+<main class="mainContainer">
+  <div class="number">
+    <h3>hola</h3>
+  </div>
+  <div class="orderBy">
+    <h3>Order by:</h3>
+    <div>
+      <label>
+        <input type="checkbox" name="filter" value="price" (change)="selectFilter($event)"> Price
+      </label>
+      <label>
+        <input type="checkbox" name="filter" value="name" (change)="selectFilter($event)"> Name
+      </label>
+      <label>
+        <input type="checkbox" name="filter" value="category" (change)="selectFilter($event)"> Category
+      </label>
+    </div>    
+  </div>
+</main>
