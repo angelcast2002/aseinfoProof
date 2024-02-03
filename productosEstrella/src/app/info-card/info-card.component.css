@@ -1,0 +1,28 @@
+.principalContainer {
+  width: calc(100% - 40px);
+  height: 340px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #EAE9E9;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 60%;
+  background-color: rgb(96, 125, 139, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preInfoContainer {
+  width: 100%;
+  height: 40%;
+}

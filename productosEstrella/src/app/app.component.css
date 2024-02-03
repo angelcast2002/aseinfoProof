@@ -1,0 +1,40 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  width: calc(100% - 30px);
+  height: calc(20% - 30px);
+  padding: 15px;
+  display: flex;
+  background-color: red;
+}
+
+.page {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.filtros {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.productos {
+  width: 80%;
+  height: calc(100% - 40px);
+  display: flex;
+  padding: 20px 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
