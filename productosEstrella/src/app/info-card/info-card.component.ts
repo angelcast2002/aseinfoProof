@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-info-card',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './info-card.component.css'
 })
 export class InfoCardComponent {
-  
+  clicked: boolean = false;
+  image: string = "../../assets/asusg14.png";
+
+  @HostListener('click') onClick() {
+    this.clicked = !this.clicked;
+    console.log(this.clicked);
+  }
+
 }

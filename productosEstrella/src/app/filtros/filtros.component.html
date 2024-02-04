@@ -1,19 +1,44 @@
 <main class="mainContainer">
   <div class="number">
-    <h3>hola</h3>
+    <h3>Products</h3>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Number of products" min="0">
+    </mat-form-field>
   </div>
   <div class="orderBy">
     <h3>Order by:</h3>
-    <div>
-      <label>
-        <input type="checkbox" name="filter" value="price" (change)="selectFilter($event)"> Price
-      </label>
-      <label>
-        <input type="checkbox" name="filter" value="name" (change)="selectFilter($event)"> Name
-      </label>
-      <label>
-        <input type="checkbox" name="filter" value="category" (change)="selectFilter($event)"> Category
-      </label>
-    </div>    
+    <div class="checksBoxes">
+      <mat-checkbox
+        (change)="selectFilter('price')"
+        [checked]="selectedFilter === 'price'"
+        >Price</mat-checkbox
+      >
+      <mat-checkbox
+        (change)="selectFilter('category')"
+        [checked]="selectedFilter === 'category'"
+        >Category</mat-checkbox
+      >
+      <mat-checkbox
+        (change)="selectFilter('name')"
+        [checked]="selectedFilter === 'name'"
+        >Name</mat-checkbox
+      >
+    </div>
+    <mat-divider />
+    <div class="orden">
+      <mat-checkbox
+        (change)="orderProducts('lth')"
+        [checked]="orderFilter === 'lth'"
+        >Low to High</mat-checkbox
+      >
+      <mat-checkbox
+        (change)="orderProducts('htl')"
+        [checked]="orderFilter === 'htl'"
+        >High to Low</mat-checkbox
+      >
+    </div>
+    <div class="apply" >
+      <button mat-raised-button class="buttonApply">Apply</button>
+    </div>
   </div>
 </main>

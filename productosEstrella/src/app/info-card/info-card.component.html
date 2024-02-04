@@ -1,4 +1,16 @@
-<main class="principalContainer">
+<main
+  class="principalContainer"
+  [style.backgroundImage]="clicked ? 'url(' + image + ')' : 'none'"
+  [style.backgroundColor]="clicked ? 'rgba(198, 198, 198, 0.75)' : 'initial'"
+>
+  @if (clicked){
+  <div class="fondoContainer">
+    <div class="titleClicked">G14</div>
+    <div class="priceClicked">$1400</div>
+    <div class="infoClicked">Es una laptop</div>
+    <div class="categoryClicked">technology</div>
+  </div>
+  } @else {
   <div class="imgContainer">
     <img
       class="fileImg"
@@ -11,4 +23,5 @@
     <p class="price">$1400</p>
     <p class="category">technology</p>
   </div>
+  }
 </main>

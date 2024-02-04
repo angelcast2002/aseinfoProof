@@ -5,6 +5,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: rgb(96, 125, 139, 0.5);
+}
+
+h3 {
+  margin: 0;
+}
+
+.number{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orderBy {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checksBoxes {
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orden {
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apply {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  color: #000;
+  background-color: #AED581;
+  border-radius: 5px;
+  border: black 1px solid;
 }

@@ -1,5 +1,5 @@
 .principalContainer {
-  width: calc((100% - 40px));
+  width: 240px;
   height: 280px;
   padding: 20px;
   display: flex;
@@ -60,6 +60,40 @@ p {
 }
 
 .category {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #1C61C9;
+}
+
+.fondoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleClicked {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.priceClicked {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.infoClicked {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.categoryClicked {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   font-weight: normal;

@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-filtros',
   standalone: true,
-  imports: [],
+  imports: [MatCheckboxModule, MatDividerModule, MatInputModule, MatButtonModule],
   templateUrl: './filtros.component.html',
-  styleUrl: './filtros.component.css'
+  styleUrl: './filtros.component.css',
 })
 export class FiltrosComponent {
   selectedFilter: string = '';
 
-  selectFilter(event: any) {
-    const checkboxes = document.querySelectorAll('input[name="filter"]');
-    checkboxes.forEach((checkbox: any) => {
-      if (checkbox !== event.target) {
-        checkbox.checked = false;
-      }
-    });
-    this.selectedFilter = event.target.value;
+  selectFilter(value: string) {
+    this.selectedFilter = value;
   }
+
+  orderFilter: string = '';
+
+  orderProducts(value: string) {
+    this.orderFilter = value;
+  }
+
 }
