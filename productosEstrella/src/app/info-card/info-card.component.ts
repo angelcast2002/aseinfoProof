@@ -1,4 +1,5 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { IProduct } from '../models/product.model';
 
 @Component({
   selector: 'app-info-card',
@@ -7,13 +8,27 @@ import { Component, HostListener, Input } from '@angular/core';
   templateUrl: './info-card.component.html',
   styleUrl: './info-card.component.css'
 })
-export class InfoCardComponent {
+export class InfoCardComponent implements OnInit {
   clicked: boolean = false;
-  image: string = "../../assets/asusg14.png";
+  @Input() product?: IProduct;
+  title?: string;
+  price?: number;
+  description?: string;
+  category?: string;
+  rating?: number;
+  image?: string;
+
+  ngOnInit(): void {
+    this.title = this.product?.title;
+    this.price = this.product?.price;
+    this.description = this.product?.description;
+    this.category = this.product?.category;
+    this.rating = this.product?.rating.rate;
+    this.image = this.product?.image;
+  }
 
   @HostListener('click') onClick() {
     this.clicked = !this.clicked;
     console.log(this.clicked);
   }
-
 }

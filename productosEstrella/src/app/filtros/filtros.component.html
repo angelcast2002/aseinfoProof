@@ -2,7 +2,14 @@
   <div class="number">
     <h3>Products</h3>
     <mat-form-field>
-      <input matInput type="number" placeholder="Number of products" min="0">
+      <input
+        matInput
+        type="number"
+        placeholder="Number of products"
+        min="0"
+        [(ngModel)]="numeroDeProductos"
+        (change)="handleNumero(numeroDeProductos)"
+      />
     </mat-form-field>
   </div>
   <div class="orderBy">
@@ -37,8 +44,8 @@
         >High to Low</mat-checkbox
       >
     </div>
-    <div class="apply" >
-      <button mat-raised-button class="buttonApply">Apply</button>
+    <div class="apply">
+      <button mat-raised-button class="buttonApply" (click)="handleClick()">Apply</button>
     </div>
   </div>
 </main>

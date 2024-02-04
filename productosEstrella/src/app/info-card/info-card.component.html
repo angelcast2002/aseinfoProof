@@ -1,27 +1,27 @@
 <main
   class="principalContainer"
-  [style.backgroundImage]="clicked ? 'url(' + image + ')' : 'none'"
   [style.backgroundColor]="clicked ? 'rgba(198, 198, 198, 0.75)' : 'initial'"
+  [style.backgroundImage]="clicked ? 'url(' + image + ')' : 'none'"
 >
   @if (clicked){
   <div class="fondoContainer">
-    <div class="titleClicked">G14</div>
-    <div class="priceClicked">$1400</div>
-    <div class="infoClicked">Es una laptop</div>
-    <div class="categoryClicked">technology</div>
+    <div class="titleClicked">{{title}}</div>
+    <div class="priceClicked">${{price}}</div>
+    <div class="infoClicked">{{description}}</div>
+    <div class="categoryClicked">{{category}} - Rating: {{rating}}</div>
   </div>
   } @else {
   <div class="imgContainer">
     <img
       class="fileImg"
-      src="../../assets/asusg14.png"
+      src={{image}}
       alt="imagenDelProducto"
     />
   </div>
   <div class="preInfoContainer">
-    <p class="name">G14</p>
-    <p class="price">$1400</p>
-    <p class="category">technology</p>
+    <p class="name">{{title}}</p>
+    <p class="price">${{price}}</p>
+    <p class="category">{{category}}</p>
   </div>
   }
 </main>

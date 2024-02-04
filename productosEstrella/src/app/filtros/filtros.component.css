@@ -44,9 +44,12 @@ h3 {
 
 .apply {
   display: flex;
+  justify-content: flex-end;
+}
+
+.buttonApply {
+  display: flex;
   align-items: center;
-  height: fit-content;
-  width: fit-content;
   color: #000;
   background-color: #AED581;
   border-radius: 5px;

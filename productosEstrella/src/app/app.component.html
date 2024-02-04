@@ -4,11 +4,20 @@
   </div>
   <div class="page">
     <div class="filtros">
-      <app-filtros />
+      <app-filtros
+      (addFilterEvent)="getFilter($event)"
+      (addOrderEvent)="getOrder($event)"
+      (addNumberEvent)="getNumber($event)"
+      (addSearchEvent)="getSearch()"
+      />
     </div>
     <div class="productos">
-      @for (i of array; track i) {
-        <app-info-card (click) = "onClick()"></app-info-card>
+      @if (isLoading) {
+        <mat-spinner />
+      } @else {
+        @for (i of productList; track i.id) {
+          <app-info-card (click) = "onClick()" [product]="i"></app-info-card>
+        }
       }
     </div>
   </div>
